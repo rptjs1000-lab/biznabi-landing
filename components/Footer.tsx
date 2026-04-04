@@ -23,7 +23,7 @@ export default function Footer() {
           <div>
             <div className="flex items-center mb-4">
               <img
-                src="logo-horizontal.png"
+                src="/logo-horizontal.png"
                 alt="비즈나비 로고"
                 style={{ height: '44px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
               />

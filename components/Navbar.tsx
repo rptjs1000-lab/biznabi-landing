@@ -42,7 +42,7 @@ export default function Navbar() {
           {/* Logo */}
           <a href="#hero" onClick={(e) => handleLinkClick(e, '#hero')} className="flex items-center shrink-0">
             <img
-              src="logo-horizontal.png"
+              src="/logo-horizontal.png"
               alt="비즈나비 로고"
               className="nav-logo-img"
               style={{
