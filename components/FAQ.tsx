@@ -62,7 +62,7 @@ export default function FAQ() {
   }
 
   return (
-    <section id="faq" className="py-20 md:py-28 bg-white">
+    <section id="faq" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-blue font-semibold text-sm mb-3 fade-up">자주 묻는 질문</p>
