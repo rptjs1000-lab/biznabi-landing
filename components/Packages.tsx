@@ -66,7 +66,7 @@ export default function Packages() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Package 1 */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100">
+          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100 flex flex-col">
             <div className="mb-6">
               <h3 className="text-xl font-bold text-navy mb-2">예약 자동화 패키지</h3>
               <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>홈페이지 없이도 예약 자동화를 바로 시작할 수 있습니다</p>
@@ -100,13 +100,13 @@ export default function Packages() {
                 </li>
               </ul>
             </div>
-            <a href="#contact" onClick={handleClick} className="block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
+            <a href="#contact" onClick={handleClick} className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
               상담 신청
             </a>
           </div>
 
           {/* Package 2 */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100">
+          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100 flex flex-col">
             <div className="mb-6">
               <h3 className="text-xl font-bold text-navy mb-2">홈페이지 + 자동화 패키지</h3>
               <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>전문 홈페이지와 예약 자동화를 한 번에 시작하세요</p>
@@ -144,13 +144,13 @@ export default function Packages() {
                 </li>
               </ul>
             </div>
-            <a href="#contact" onClick={handleClick} className="block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
+            <a href="#contact" onClick={handleClick} className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
               상담 신청
             </a>
           </div>
 
           {/* Package 3 */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100">
+          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100 flex flex-col">
             <div className="mb-6">
               <h3 className="text-xl font-bold text-navy mb-2">업무 자동화 패키지</h3>
               <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>중소기업 반복 업무를 맞춤 자동화 프로그램으로 해결합니다</p>
@@ -182,7 +182,7 @@ export default function Packages() {
                 </li>
               </ul>
             </div>
-            <a href="#contact" onClick={handleClick} className="block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
+            <a href="#contact" onClick={handleClick} className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
               상담 신청
             </a>
           </div>
