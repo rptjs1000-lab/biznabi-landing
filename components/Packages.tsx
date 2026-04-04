@@ -66,17 +66,19 @@ export default function Packages() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-6 max-w-6xl mx-auto">
           {/* Package 1 */}
-          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100 flex flex-col">
+          <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up border border-slate-100 flex flex-col relative">
+            <div className="absolute -top-3 left-6 px-3 py-1 rounded-full text-xs font-bold text-white" style={{ background: 'linear-gradient(135deg, #4AADCF, #1B6AAA)' }}>초기비 무료</div>
             <div className="mb-6">
               <h3 className="text-xl font-bold text-navy mb-2">예약 자동화 패키지</h3>
               <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>홈페이지 없이도 예약 자동화를 바로 시작할 수 있습니다</p>
             </div>
             <div className="border-t border-slate-100 pt-6 mb-6">
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="font-space text-4xl font-bold text-navy">39</span>
-                <span className="text-lg font-semibold text-navy">만원</span>
-                <span className="text-slate-500 text-sm ml-1">/ 초기 설정비</span>
+              <div className="flex items-baseline gap-1 mb-2">
+                <span className="font-space text-4xl font-bold text-navy">9.9</span>
+                <span className="text-lg font-semibold text-navy">만원~</span>
+                <span className="text-slate-500 text-sm ml-1">/ 월</span>
               </div>
+              <p className="text-skyblue text-xs font-semibold mb-6">초기 설정비 무료</p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm text-slate-600">
                   <CheckSvg />
@@ -112,11 +114,12 @@ export default function Packages() {
               <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>전문 홈페이지와 예약 자동화를 한 번에 시작하세요</p>
             </div>
             <div className="border-t border-slate-100 pt-6 mb-6">
-              <div className="flex items-baseline gap-1 mb-6">
-                <span className="font-space text-4xl font-bold text-navy">79</span>
-                <span className="text-lg font-semibold text-navy">만원</span>
-                <span className="text-slate-500 text-sm ml-1">/ 초기 설정비</span>
+              <div className="flex items-baseline gap-1 mb-2">
+                <span className="font-space text-4xl font-bold text-navy">200</span>
+                <span className="text-lg font-semibold text-navy">만원~</span>
+                <span className="text-slate-500 text-sm ml-1">/ 초기 제작비</span>
               </div>
+              <p className="text-slate-500 text-xs mb-6">+ 월 유지비 15만원~</p>
               <ul className="space-y-3">
                 <li className="flex items-center gap-3 text-sm text-slate-600">
                   <CheckSvg />
@@ -188,7 +191,7 @@ export default function Packages() {
           </div>
         </div>
 
-        <p className="text-center text-slate-400 text-sm mt-8 fade-up">* 월 유지보수 비용은 별도 / 상담 시 안내드립니다</p>
+        <p className="text-center text-slate-400 text-sm mt-8 fade-up">* 부가세 별도 / 상세 견적은 상담 시 안내드립니다</p>
       </div>
     </section>
   )
