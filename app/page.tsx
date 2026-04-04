@@ -4,8 +4,6 @@ import PainPoint from '@/components/PainPoint'
 import Solution from '@/components/Solution'
 import Packages from '@/components/Packages'
 import Features from '@/components/Features'
-import Industries from '@/components/Industries'
-import Process from '@/components/Process'
 import Stats from '@/components/Stats'
 import FAQ from '@/components/FAQ'
 import Contact from '@/components/Contact'
@@ -37,8 +35,6 @@ export default function Home() {
       <Solution />
       <Packages />
       <Features />
-      <Industries />
-      <Process />
       <Stats />
       <FAQ />
       <Contact />

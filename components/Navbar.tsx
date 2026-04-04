@@ -83,15 +83,6 @@ export default function Navbar() {
               요금
             </a>
             <a
-              href="#process"
-              onClick={(e) => handleLinkClick(e, '#process')}
-              className={`text-sm font-medium transition-colors ${
-                scrolled ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
-              }`}
-            >
-              프로세스
-            </a>
-            <a
               href="#contact"
               onClick={(e) => handleLinkClick(e, '#contact')}
               className={`text-sm font-medium transition-colors ${
@@ -133,7 +124,6 @@ export default function Navbar() {
             <a href="#pain-point" onClick={(e) => handleLinkClick(e, '#pain-point')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">서비스</a>
             <a href="#features" onClick={(e) => handleLinkClick(e, '#features')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">기능</a>
             <a href="#packages" onClick={(e) => handleLinkClick(e, '#packages')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">요금</a>
-            <a href="#process" onClick={(e) => handleLinkClick(e, '#process')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">프로세스</a>
             <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">문의</a>
             <a href="#contact" onClick={(e) => handleLinkClick(e, '#contact')} className="inline-block btn-primary text-white text-sm font-semibold px-6 py-2.5 rounded-lg mt-2">무료 상담</a>
           </div>
