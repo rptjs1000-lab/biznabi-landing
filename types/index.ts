@@ -15,7 +15,7 @@ export interface ContactInquiry {
 }
 
 /** 패키지 종류 */
-export type PackageType = "예약자동화" | "홈페이지+자동화" | "업무자동화";
+export type PackageType = "홈페이지제작" | "자동화패키지" | "번들(홈페이지+자동화)" | "상담후결정";
 
 /** 상담 신청 성공 응답 */
 export interface ContactSuccessResponse {

@@ -4,9 +4,10 @@ import type { ContactInquiry, PackageType } from "@/types";
 
 /** 허용된 패키지 목록 */
 const VALID_PACKAGES: PackageType[] = [
-  "예약자동화",
-  "홈페이지+자동화",
-  "업무자동화",
+  "홈페이지제작",
+  "자동화패키지",
+  "번들(홈페이지+자동화)",
+  "상담후결정",
 ];
 
 /** 한국 전화번호 검증 (010-1234-5678 / 01012345678 / 02-123-4567 등) */
@@ -15,8 +16,8 @@ const PHONE_REGEX = /^0\d{1,2}-?\d{3,4}-?\d{4}$/;
 /** 허용할 Origin 목록 (운영 환경에 맞게 수정) */
 const ALLOWED_ORIGINS = [
   process.env.NEXT_PUBLIC_SITE_URL,
-  "https://biznabi.co.kr",
-  "https://www.biznabi.co.kr",
+  "https://biznabi.com",
+  "https://www.biznabi.com",
 ].filter(Boolean) as string[];
 
 /** CORS 헤더 생성 */

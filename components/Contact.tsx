@@ -3,10 +3,10 @@
 import { useEffect, useState } from 'react'
 
 const PACKAGE_MAP: Record<string, string> = {
-  reservation: '예약자동화',
-  full: '홈페이지+자동화',
-  business: '업무자동화',
-  consult: '상담 후 결정',
+  homepage: '홈페이지제작',
+  automation: '자동화패키지',
+  bundle: '번들(홈페이지+자동화)',
+  consult: '상담후결정',
 }
 
 export default function Contact() {
@@ -70,7 +70,7 @@ export default function Contact() {
           industry,
           contactName,
           phone,
-          package: PACKAGE_MAP[pkg] || '예약자동화',
+          package: PACKAGE_MAP[pkg] || '상담후결정',
           memo: memo || undefined,
         }),
       })
@@ -166,16 +166,16 @@ export default function Contact() {
               <label className="block text-sm font-semibold text-navy mb-2">관심 패키지</label>
               <div className="flex flex-wrap gap-3" role="radiogroup" aria-label="관심 패키지 선택">
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="package" value="reservation" className="w-4 h-4 text-blue accent-blue" />
-                  <span className="text-sm text-slate-600">예약 자동화 패키지</span>
+                  <input type="radio" name="package" value="homepage" className="w-4 h-4 text-blue accent-blue" />
+                  <span className="text-sm text-slate-600">홈페이지 제작</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="package" value="full" className="w-4 h-4 text-blue accent-blue" />
-                  <span className="text-sm text-slate-600">홈페이지 + 자동화 패키지</span>
+                  <input type="radio" name="package" value="automation" className="w-4 h-4 text-blue accent-blue" />
+                  <span className="text-sm text-slate-600">비즈나비 자동화 패키지</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
-                  <input type="radio" name="package" value="business" className="w-4 h-4 text-blue accent-blue" />
-                  <span className="text-sm text-slate-600">업무 자동화 패키지</span>
+                  <input type="radio" name="package" value="bundle" className="w-4 h-4 text-blue accent-blue" />
+                  <span className="text-sm text-slate-600">번들 (홈페이지 + 자동화, 20% 할인)</span>
                 </label>
                 <label className="flex items-center gap-2 cursor-pointer">
                   <input type="radio" name="package" value="consult" className="w-4 h-4 text-blue accent-blue" defaultChecked />

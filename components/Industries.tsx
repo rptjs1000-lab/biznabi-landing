@@ -60,8 +60,8 @@ export default function Industries() {
           </h2>
         </div>
 
-        {/* 매장 자동화 */}
-        <p className="text-blue font-semibold text-sm mb-4 fade-up">매장 자동화</p>
+        {/* 예약·고객 자동화 중심 업종 */}
+        <p className="text-blue font-semibold text-sm mb-4 fade-up">예약·고객 자동화가 필요한 업종</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6 mb-10">
           {storeIndustries.map((item, i) => (
             <div key={i} className="bg-white rounded-2xl p-6 text-center card-hover fade-up shadow-sm">
@@ -71,8 +71,8 @@ export default function Industries() {
           ))}
         </div>
 
-        {/* 중소기업 업무 자동화 */}
-        <p className="text-blue font-semibold text-sm mb-4 fade-up">중소기업 업무 자동화</p>
+        {/* 홈페이지 제작 중심 업종 */}
+        <p className="text-blue font-semibold text-sm mb-4 fade-up">맞춤 홈페이지 제작이 필요한 업종</p>
         <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-4 lg:gap-6">
           {businessIndustries.map((item, i) => (
             <div key={i} className="bg-white rounded-2xl p-6 text-center card-hover fade-up shadow-sm">

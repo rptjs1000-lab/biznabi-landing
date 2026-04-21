@@ -61,7 +61,7 @@ export default function Solution() {
               복잡한 비즈니스 운영,<br />비즈나비가 한 번에 해결합니다
             </h2>
             <p className="text-slate-500 text-lg mb-8 fade-up" style={{ lineHeight: '1.7' }}>
-              매장 예약 자동화부터 중소기업 업무 자동화까지 — 비즈니스에 필요한 디지털 도구를 맞춤 제작해 드립니다.
+              업종 맞춤 홈페이지부터 예약·고객·알림 자동화까지 — 소상공인의 디지털 전환을 한 번에 해결해 드립니다.
             </p>
 
             <div className="space-y-5 fade-up">
@@ -97,8 +97,8 @@ export default function Solution() {
                   <CheckIcon />
                 </div>
                 <div>
-                  <h4 className="font-bold text-navy mb-1">중소기업 업무 자동화</h4>
-                  <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>견적서, 발주/수주, 리포트 등 반복 업무를 자동화</p>
+                  <h4 className="font-bold text-navy mb-1">고객·리뷰 통합 관리</h4>
+                  <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>방문 이력·단골 관리·재방문 알림·후기 수집까지 한 번에</p>
                 </div>
               </div>
             </div>
