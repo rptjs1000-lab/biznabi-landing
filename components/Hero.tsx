@@ -71,8 +71,8 @@ export default function Hero() {
           className="text-base sm:text-lg md:text-xl text-white/80 mb-10 max-w-2xl mx-auto fade-up"
           style={{ lineHeight: '1.7' }}
         >
-          매장 예약 자동화부터 중소기업 업무 자동화까지<br className="hidden sm:block" />
-          비즈니스 운영의 모든 것을 한 번에
+          업종 맞춤 홈페이지부터 예약·고객 자동화까지<br className="hidden sm:block" />
+          소상공인의 디지털 전환을 한 번에
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center fade-up">
           <a

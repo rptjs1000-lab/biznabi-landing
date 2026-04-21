@@ -12,13 +12,13 @@ const jsonLd = {
   '@context': 'https://schema.org',
   '@type': 'ProfessionalService',
   name: '비즈나비',
-  url: 'https://biznabi.co.kr',
-  description: '소상공인·중소기업을 위한 비즈니스 자동화 에이전시',
+  url: 'https://biznabi.com',
+  description: '소상공인을 위한 홈페이지 제작 및 매장 자동화 에이전시',
   areaServed: {
     '@type': 'Country',
     name: 'KR',
   },
-  serviceType: ['비즈니스 자동화', '매장 예약 자동화', '업무 프로세스 자동화'],
+  serviceType: ['홈페이지 제작', '매장 예약 자동화', '고객 관리 자동화', '알림톡 자동화'],
 }
 
 export default function Home() {

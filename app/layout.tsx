@@ -2,14 +2,14 @@ import type { Metadata } from 'next'
 import './globals.css'
 
 export const metadata: Metadata = {
-  metadataBase: new URL('https://biznabi.co.kr'),
-  title: '비즈나비 | 매장 예약 자동화 & 중소기업 업무 자동화',
-  description: '소상공인·중소기업을 위한 비즈니스 자동화 에이전시. 매장 예약, 고객 관리, 업무 프로세스를 AI로 자동화하여 매출은 높이고 운영 비용은 줄여드립니다.',
-  keywords: ['비즈니스 자동화', '매장 예약 자동화', '중소기업 업무 자동화', '소상공인 자동화', 'AI 자동화', '비즈나비', 'BIZNABI', '고객 관리 자동화', '업무 효율화'],
+  metadataBase: new URL('https://biznabi.com'),
+  title: '비즈나비 | 소상공인 홈페이지 제작 & 매장 자동화 에이전시',
+  description: '소상공인을 위한 홈페이지 제작 + 예약·고객·알림 자동화 에이전시. 업종 맞춤 반응형 홈페이지부터 비즈나비 자동화 패키지까지, 한 파트너에서 해결.',
+  keywords: ['홈페이지 제작', '반응형 홈페이지', '소상공인 홈페이지', '매장 예약 자동화', '고객 관리 자동화', '비즈나비 자동화 패키지', '알림톡 자동화', '재방문 알림', '비즈나비', 'BIZNABI'],
   openGraph: {
-    title: '비즈나비 | 매장 예약 자동화 & 중소기업 업무 자동화',
-    description: '소상공인·중소기업을 위한 비즈니스 자동화 에이전시. 매장 예약, 고객 관리, 업무 프로세스를 AI로 자동화해 드립니다.',
-    url: 'https://biznabi.co.kr',
+    title: '비즈나비 | 소상공인 홈페이지 제작 & 매장 자동화 에이전시',
+    description: '업종 맞춤 홈페이지부터 예약·고객 자동화까지, 소상공인의 디지털 전환을 한 번에.',
+    url: 'https://biznabi.com',
     siteName: '비즈나비',
     locale: 'ko_KR',
     type: 'website',

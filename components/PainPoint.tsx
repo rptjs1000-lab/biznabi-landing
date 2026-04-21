@@ -69,11 +69,11 @@ export default function PainPoint() {
           <div className="bg-white rounded-2xl p-8 shadow-lg card-hover fade-up">
             <div className="w-14 h-14 rounded-xl bg-sky-50 flex items-center justify-center mb-6">
               <svg className="w-7 h-7 text-sky-500" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-                <path strokeLinecap="round" strokeLinejoin="round" d="M21 21l-5.197-5.197m0 0A7.5 7.5 0 105.196 5.196a7.5 7.5 0 0010.607 10.607z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
               </svg>
             </div>
-            <h3 className="text-xl font-bold text-navy mb-3">반복 업무에 시간을 빼앗기고 있나요?</h3>
-            <p className="text-slate-500" style={{ lineHeight: '1.7' }}>견적서 작성, 보고서 정리, 재고 확인... 매일 반복되는 업무를 자동화하면 핵심 비즈니스에 집중할 수 있습니다.</p>
+            <h3 className="text-xl font-bold text-navy mb-3">고객 관리, 수기로 하고 계신가요?</h3>
+            <p className="text-slate-500" style={{ lineHeight: '1.7' }}>단골 메모·방문 이력·후기를 수기로 관리하다 놓치는 것이 많으시죠? 고객 DB와 재방문 자동 알림으로 단골을 지켜드립니다.</p>
           </div>
         </div>
       </div>
