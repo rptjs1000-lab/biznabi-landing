@@ -105,8 +105,8 @@ export default function Features() {
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue to-skyblue flex items-center justify-center mx-auto mb-5">
                 {feature.icon}
               </div>
-              <h3 className="text-lg font-bold text-navy mb-2">{feature.title}</h3>
-              <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7' }}>{feature.desc}</p>
+              <h3 className="text-lg font-bold text-navy mb-2" style={{ wordBreak: 'keep-all' }}>{feature.title}</h3>
+              <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>{feature.desc}</p>
             </div>
           ))}
         </div>
