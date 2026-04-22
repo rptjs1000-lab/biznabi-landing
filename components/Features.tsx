@@ -59,34 +59,6 @@ const features = [
       </svg>
     ),
   },
-  {
-    title: '고객 CRM · 재방문 알림',
-    desc: (
-      <>
-        방문 이력·메모·태그를 자동 관리하고,<br />
-        재방문 주기가 오면 알림톡으로 자동 안내합니다.
-      </>
-    ),
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" />
-      </svg>
-    ),
-  },
-  {
-    title: '리뷰 · 포인트 · 쿠폰',
-    desc: (
-      <>
-        후기 자동 수집, 포인트·적립금 관리, 쿠폰 발행까지<br />
-        단골 관리에 필요한 모든 도구를 한 번에.
-      </>
-    ),
-    icon: (
-      <svg className="w-8 h-8 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24">
-        <path strokeLinecap="round" strokeLinejoin="round" d="M11.48 3.499a.562.562 0 011.04 0l2.125 5.111a.563.563 0 00.475.345l5.518.442c.499.04.701.663.321.988l-4.204 3.602a.563.563 0 00-.182.557l1.285 5.385a.562.562 0 01-.84.61l-4.725-2.885a.563.563 0 00-.586 0L6.982 20.54a.562.562 0 01-.84-.61l1.285-5.386a.562.562 0 00-.182-.557l-4.204-3.602a.562.562 0 01.321-.988l5.518-.442a.563.563 0 00.475-.345L11.48 3.5z" />
-      </svg>
-    ),
-  },
 ]
 
 export default function Features() {
@@ -129,7 +101,7 @@ export default function Features() {
           </h2>
         </div>
 
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-6">
           {features.map((feature, i) => (
             <div key={i} className="bg-slate-50 rounded-2xl p-7 card-hover fade-up text-center">
               <div className="w-16 h-16 rounded-2xl bg-gradient-to-br from-blue to-skyblue flex items-center justify-center mx-auto mb-5">
@@ -139,6 +111,42 @@ export default function Features() {
               <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>{feature.desc}</p>
             </div>
           ))}
+        </div>
+
+        {/* 맞춤 자동화 개발 배너 */}
+        <div className="mt-10 fade-up">
+          <div
+            className="rounded-2xl p-7 md:p-10 text-white shadow-lg flex flex-col md:flex-row items-center gap-6 md:gap-8"
+            style={{ background: 'linear-gradient(135deg, #1B6AAA 0%, #0A2540 100%)' }}
+          >
+            <div className="shrink-0 w-16 h-16 rounded-2xl bg-white/10 flex items-center justify-center">
+              <svg className="w-9 h-9 text-white" fill="none" stroke="currentColor" strokeWidth="1.5" viewBox="0 0 24 24" aria-hidden="true">
+                <path strokeLinecap="round" strokeLinejoin="round" d="M9.594 3.94c.09-.542.56-.94 1.11-.94h2.593c.55 0 1.02.398 1.11.94l.213 1.281c.063.374.313.686.645.87.074.04.147.083.22.127.325.196.72.257 1.075.124l1.217-.456a1.125 1.125 0 011.37.49l1.296 2.247a1.125 1.125 0 01-.26 1.431l-1.003.827c-.293.24-.438.613-.431.992a6.759 6.759 0 010 .255c-.007.378.138.75.43.99l1.005.828c.424.35.534.954.26 1.43l-1.298 2.247a1.125 1.125 0 01-1.369.491l-1.217-.456c-.355-.133-.75-.072-1.076.124a6.57 6.57 0 01-.22.127c-.331.183-.581.495-.644.869l-.213 1.28c-.09.543-.56.941-1.11.941h-2.594c-.55 0-1.02-.398-1.11-.94l-.213-1.281c-.062-.374-.312-.686-.644-.87a6.52 6.52 0 01-.22-.127c-.325-.196-.72-.257-1.076-.124l-1.217.456a1.125 1.125 0 01-1.369-.49l-1.297-2.247a1.125 1.125 0 01.26-1.431l1.004-.827c.292-.24.437-.613.43-.992a6.932 6.932 0 010-.255c.007-.378-.138-.75-.43-.99l-1.004-.828a1.125 1.125 0 01-.26-1.43l1.297-2.247a1.125 1.125 0 011.37-.491l1.216.456c.356.133.751.072 1.076-.124.072-.044.146-.086.22-.127.332-.183.582-.495.644-.869l.214-1.281z" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <div className="flex-1 text-center md:text-left" style={{ wordBreak: 'keep-all' }}>
+              <p className="text-sm font-semibold mb-2" style={{ color: '#B6D9EC' }}>맞춤 자동화 개발</p>
+              <h3 className="text-xl md:text-2xl font-bold mb-2">필요한 자동화가 따로 있나요?</h3>
+              <p className="text-sm md:text-base opacity-90" style={{ lineHeight: '1.7' }}>
+                매장·업종별 고유 업무 흐름에 맞춘 자동화 기능을 상담을 통해 개별 설계·개발해드립니다.<br />
+                공개 리스트에 없는 기능도 가능합니다.
+              </p>
+            </div>
+            <a
+              href="https://pf.kakao.com/_xhGMjX/chat"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="카카오톡 채널 비즈나비에서 맞춤 자동화 상담하기 (새 창)"
+              className="shrink-0 inline-flex items-center gap-2 px-6 py-3 rounded-xl font-bold text-sm md:text-base transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#FEE500', color: '#191919' }}
+            >
+              맞춤 상담 문의
+              <svg width="18" height="18" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </a>
+          </div>
         </div>
       </div>
     </section>
