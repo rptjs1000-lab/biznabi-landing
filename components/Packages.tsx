@@ -38,16 +38,6 @@ export default function Packages() {
     return () => fadeObserver.disconnect()
   }, [])
 
-  const handleClick = (e: React.MouseEvent<HTMLAnchorElement>) => {
-    e.preventDefault()
-    const target = document.querySelector('#contact')
-    if (target) {
-      const offset = 80
-      const top = target.getBoundingClientRect().top + window.pageYOffset - offset
-      window.scrollTo({ top, behavior: 'smooth' })
-    }
-  }
-
   return (
     <section id="packages" className="py-20 md:py-28 bg-slate-50">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -98,7 +88,13 @@ export default function Packages() {
                 </li>
               </ul>
             </div>
-            <a href="#contact" onClick={handleClick} className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
+            <a
+              href="https://pf.kakao.com/_xhGMjX/chat"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="카카오톡 채널 비즈나비에서 상담하기 (새 창)"
+              className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all"
+            >
               상담 신청
             </a>
           </div>
@@ -139,7 +135,13 @@ export default function Packages() {
                 </li>
               </ul>
             </div>
-            <a href="#contact" onClick={handleClick} className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all">
+            <a
+              href="https://pf.kakao.com/_xhGMjX/chat"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="카카오톡 채널 비즈나비에서 상담하기 (새 창)"
+              className="mt-auto block text-center border-2 border-navy text-navy font-semibold py-3.5 rounded-xl hover:bg-navy hover:text-white transition-all"
+            >
               상담 신청
             </a>
           </div>
