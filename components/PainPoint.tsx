@@ -51,7 +51,10 @@ export default function PainPoint() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-navy mb-3" style={{ wordBreak: 'keep-all' }}>예약 전화, 놓치고 계세요?</h3>
-            <p className="text-slate-500" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>바쁜 시간에 걸려오는 예약 전화를 받지 못해 고객을 놓치고 있진 않으신가요? 24시간 온라인 예약으로 해결하세요.</p>
+            <p className="text-slate-500" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>
+              바쁜 시간에 걸려오는 예약 전화를 받지 못해 고객을 놓치고 있진 않으신가요?<br />
+              24시간 온라인 예약으로 해결하세요.
+            </p>
           </div>
 
           {/* Card 2 */}
@@ -62,7 +65,12 @@ export default function PainPoint() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-navy mb-3" style={{ wordBreak: 'keep-all' }}>노쇼 때문에 매출 손실?</h3>
-            <p className="text-slate-500" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>예약하고 나타나지 않는 고객 때문에 빈 자리가 생기고 있나요? 알림톡 자동 리마인드로 노쇼를 줄여드립니다.</p>
+            <p className="text-slate-500" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>
+              예약하고 나타나지 않는 고객 때문에<br />
+              빈 자리가 생기고 있나요?<br />
+              알림톡 자동 리마인드로<br />
+              노쇼를 줄여드립니다.
+            </p>
           </div>
 
           {/* Card 3 */}
@@ -73,7 +81,12 @@ export default function PainPoint() {
               </svg>
             </div>
             <h3 className="text-xl font-bold text-navy mb-3" style={{ wordBreak: 'keep-all' }}>고객 관리, 수기로 하고 계신가요?</h3>
-            <p className="text-slate-500" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>단골 메모·방문 이력·후기를 수기로 관리하다 놓치는 것이 많으시죠? 고객 DB와 재방문 자동 알림으로 단골을 지켜드립니다.</p>
+            <p className="text-slate-500" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>
+              단골 메모·방문 이력·후기를<br />
+              수기로 관리하다 놓치는 것이 많으시죠?<br />
+              고객 DB와 재방문 자동 알림으로<br />
+              단골을 지켜드립니다.
+            </p>
           </div>
         </div>
       </div>
