@@ -32,7 +32,7 @@ export default function Footer() {
               소상공인을 위한<br />홈페이지 제작 + 매장 자동화 에이전시
             </p>
             <p className="text-white/40 text-xs mb-4" style={{ lineHeight: '1.7' }}>
-              상담·견적 문의는 하단 <a href="#contact" onClick={(e) => handleClick(e, '#contact')} className="text-skyblue hover:underline">무료 상담 신청</a> 을 이용해주세요.
+              상담·견적 문의는 카카오톡 채널 <span className="text-skyblue">@비즈나비</span> 로 편하게 연락주세요.
             </p>
             <a
               href="https://pf.kakao.com/_xhGMjX"

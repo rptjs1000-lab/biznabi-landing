@@ -3,7 +3,7 @@
 import { useEffect } from 'react'
 
 const steps = [
-  { num: '1', title: '상담 신청', descDesktop: '간단한 폼 작성으로\n상담을 신청합니다', descMobile: '간단한 폼 작성으로 상담을 신청합니다', gradient: 'from-skyblue to-blue' },
+  { num: '1', title: '상담 문의', descDesktop: '카카오톡 채널에서\n편하게 문의하세요', descMobile: '카카오톡 채널에서 편하게 문의하세요', gradient: 'from-skyblue to-blue' },
   { num: '2', title: '요구사항 분석', descDesktop: '비즈니스 특성과 필요한\n기능을 파악합니다', descMobile: '비즈니스 특성과 필요한 기능을 파악합니다', gradient: 'from-skyblue to-blue' },
   { num: '3', title: '제작 / 설정', descDesktop: '홈페이지 제작과\n시스템 세팅을 진행합니다', descMobile: '홈페이지 제작과 시스템 세팅을 진행합니다', gradient: 'from-skyblue to-blue' },
   { num: '4', title: '교육', descDesktop: '대시보드 사용법을\n쉽게 알려드립니다', descMobile: '대시보드 사용법을 쉽게 알려드립니다', gradient: 'from-skyblue to-blue' },
