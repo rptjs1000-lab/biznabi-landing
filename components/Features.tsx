@@ -129,7 +129,8 @@ export default function Features() {
               <p className="text-sm font-semibold mb-2" style={{ color: '#B6D9EC' }}>맞춤 자동화 개발</p>
               <h3 className="text-xl md:text-2xl font-bold mb-2">필요한 자동화가 따로 있나요?</h3>
               <p className="text-sm md:text-base opacity-90" style={{ lineHeight: '1.7' }}>
-                매장·업종별 고유 업무 흐름에 맞춘 자동화 기능을 상담을 통해 개별 설계·개발해드립니다.<br />
+                매장·업종별 고유 업무 흐름에 맞춘 자동화 기능을<br />
+                상담을 통해 개별 설계·개발해드립니다.<br />
                 공개 리스트에 없는 기능도 가능합니다.
               </p>
             </div>
