@@ -76,7 +76,7 @@ export default function Contact() {
       })
       const data = await res.json()
       if (data.ok) {
-        setResult({ ok: true, message: '상담 신청이 완료되었습니다. 빠른 시일 내에 연락드리겠습니다.' })
+        setResult({ ok: true, message: '상담 신청이 완료되었습니다. 빠른 답변이 필요하시면 카카오톡 채널(@비즈나비)로도 문의해주세요.' })
         e.currentTarget.reset()
       } else {
         setResult({ ok: false, message: data.error || '신청에 실패했습니다. 다시 시도해주세요.' })
@@ -98,6 +98,35 @@ export default function Contact() {
           </h2>
           <p className="text-slate-500 fade-up" style={{ lineHeight: '1.7' }}>아래 정보를 남겨주시면 1영업일 이내에 연락드리겠습니다.</p>
         </div>
+
+        <a
+          href="https://pf.kakao.com/_xhGMjX/chat"
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="카카오톡 채널 비즈나비에서 바로 상담하기 (새 창)"
+          className="fade-up group block mb-6 rounded-2xl shadow-lg transition-all hover:shadow-xl hover:-translate-y-0.5"
+          style={{ backgroundColor: '#FEE500' }}
+        >
+          <div className="flex items-center justify-between gap-4 p-5 md:p-6">
+            <div className="flex items-center gap-4 min-w-0">
+              <div className="shrink-0 w-11 h-11 md:w-12 md:h-12 rounded-full bg-white flex items-center justify-center">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                  <path d="M12 3C6.48 3 2 6.58 2 11c0 2.85 1.86 5.36 4.68 6.8-.2.7-.72 2.55-.82 2.95-.13.5.18.5.4.36.17-.11 2.66-1.8 3.73-2.52.66.1 1.34.16 2.01.16 5.52 0 10-3.58 10-8S17.52 3 12 3z" fill="#191919"/>
+                </svg>
+              </div>
+              <div className="min-w-0">
+                <p className="text-xs font-semibold mb-0.5" style={{ color: '#5C4A00' }}>빠른 상담을 원하시나요?</p>
+                <p className="text-base md:text-lg font-bold truncate" style={{ color: '#191919' }}>카카오톡 채널로 바로 문의</p>
+              </div>
+            </div>
+            <div className="shrink-0 flex items-center gap-2">
+              <span className="hidden sm:inline text-sm font-semibold" style={{ color: '#191919' }}>@비즈나비</span>
+              <svg className="transition-transform group-hover:translate-x-0.5" width="20" height="20" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M9 18l6-6-6-6" stroke="#191919" strokeWidth="2.5" strokeLinecap="round" strokeLinejoin="round"/>
+              </svg>
+            </div>
+          </div>
+        </a>
 
         <div className="bg-white rounded-2xl shadow-xl p-8 md:p-10 fade-up">
           <form className="space-y-5" onSubmit={handleSubmit}>

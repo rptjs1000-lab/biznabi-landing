@@ -31,9 +31,22 @@ export default function Footer() {
             <p className="text-white/50 text-sm mb-4" style={{ lineHeight: '1.7' }}>
               소상공인을 위한<br />홈페이지 제작 + 매장 자동화 에이전시
             </p>
-            <p className="text-white/40 text-xs" style={{ lineHeight: '1.7' }}>
+            <p className="text-white/40 text-xs mb-4" style={{ lineHeight: '1.7' }}>
               상담·견적 문의는 하단 <a href="#contact" onClick={(e) => handleClick(e, '#contact')} className="text-skyblue hover:underline">무료 상담 신청</a> 을 이용해주세요.
             </p>
+            <a
+              href="https://pf.kakao.com/_xhGMjX"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="카카오톡 채널 비즈나비 열기 (새 창)"
+              className="inline-flex items-center gap-2 px-4 py-2 rounded-lg text-sm font-semibold transition-opacity hover:opacity-90"
+              style={{ backgroundColor: '#FEE500', color: '#191919' }}
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <path d="M12 3C6.48 3 2 6.58 2 11c0 2.85 1.86 5.36 4.68 6.8-.2.7-.72 2.55-.82 2.95-.13.5.18.5.4.36.17-.11 2.66-1.8 3.73-2.52.66.1 1.34.16 2.01.16 5.52 0 10-3.58 10-8S17.52 3 12 3z" fill="#191919"/>
+              </svg>
+              카카오톡 채널 @비즈나비
+            </a>
           </div>
 
           {/* Quick Links */}
