@@ -76,8 +76,10 @@ export default function Hero() {
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center fade-up">
           <a
-            href="#contact"
-            onClick={(e) => handleClick(e, '#contact')}
+            href="https://pf.kakao.com/_xhGMjX/chat"
+            target="_blank"
+            rel="noopener noreferrer"
+            aria-label="카카오톡 채널 비즈나비에서 무료 상담하기 (새 창)"
             className="btn-primary text-white font-bold px-8 py-4 rounded-xl text-base shadow-lg shadow-navy/20"
           >
             무료 상담 신청
