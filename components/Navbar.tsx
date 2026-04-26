@@ -1,8 +1,12 @@
 'use client'
 
 import { useEffect, useState, useCallback } from 'react'
+import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Navbar() {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
   const [scrolled, setScrolled] = useState(false)
   const [mobileOpen, setMobileOpen] = useState(false)
 
@@ -15,7 +19,8 @@ export default function Navbar() {
     return () => window.removeEventListener('scroll', handleScroll)
   }, [])
 
-  const handleLinkClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+  const handleHashClick = useCallback((e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    if (!isHome) return
     e.preventDefault()
     setMobileOpen(false)
     if (targetId === '#hero') {
@@ -28,9 +33,10 @@ export default function Navbar() {
       const top = target.getBoundingClientRect().top + window.pageYOffset - offset
       window.scrollTo({ top, behavior: 'smooth' })
     }
-  }, [])
+  }, [isHome])
 
-  const solid = scrolled || mobileOpen
+  const hashHref = (hash: string) => (isHome ? hash : `/${hash}`)
+  const solid = scrolled || mobileOpen || !isHome
 
   return (
     <nav
@@ -42,7 +48,7 @@ export default function Navbar() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <a href="#hero" onClick={(e) => handleLinkClick(e, '#hero')} className="flex items-center shrink-0">
+          <Link href="/" className="flex items-center shrink-0" aria-label="비즈나비 홈으로 이동">
             <img
               src="/logo-horizontal.png"
               alt="비즈나비 로고"
@@ -53,13 +59,13 @@ export default function Navbar() {
                 filter: solid ? 'none' : 'brightness(0) invert(1)',
               }}
             />
-          </a>
+          </Link>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center gap-8">
             <a
-              href="#pain-point"
-              onClick={(e) => handleLinkClick(e, '#pain-point')}
+              href={hashHref('#pain-point')}
+              onClick={(e) => handleHashClick(e, '#pain-point')}
               className={`text-sm font-medium transition-colors ${
                 solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
               }`}
@@ -67,8 +73,8 @@ export default function Navbar() {
               서비스
             </a>
             <a
-              href="#features"
-              onClick={(e) => handleLinkClick(e, '#features')}
+              href={hashHref('#features')}
+              onClick={(e) => handleHashClick(e, '#features')}
               className={`text-sm font-medium transition-colors ${
                 solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
               }`}
@@ -76,14 +82,22 @@ export default function Navbar() {
               기능
             </a>
             <a
-              href="#packages"
-              onClick={(e) => handleLinkClick(e, '#packages')}
+              href={hashHref('#packages')}
+              onClick={(e) => handleHashClick(e, '#packages')}
               className={`text-sm font-medium transition-colors ${
                 solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
               }`}
             >
               요금
             </a>
+            <Link
+              href="/portfolio"
+              className={`text-sm font-medium transition-colors ${
+                solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
+              }`}
+            >
+              포트폴리오
+            </Link>
             <a
               href="https://pf.kakao.com/_xhGMjX/chat"
               target="_blank"
@@ -121,9 +135,10 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className={`mobile-menu md:hidden ${mobileOpen ? 'open' : ''}`}>
           <div className="pb-4 space-y-2 border-t border-slate-100 pt-3">
-            <a href="#pain-point" onClick={(e) => handleLinkClick(e, '#pain-point')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">서비스</a>
-            <a href="#features" onClick={(e) => handleLinkClick(e, '#features')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">기능</a>
-            <a href="#packages" onClick={(e) => handleLinkClick(e, '#packages')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">요금</a>
+            <a href={hashHref('#pain-point')} onClick={(e) => handleHashClick(e, '#pain-point')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">서비스</a>
+            <a href={hashHref('#features')} onClick={(e) => handleHashClick(e, '#features')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">기능</a>
+            <a href={hashHref('#packages')} onClick={(e) => handleHashClick(e, '#packages')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">요금</a>
+            <Link href="/portfolio" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">포트폴리오</Link>
             <a
               href="https://pf.kakao.com/_xhGMjX/chat"
               target="_blank"

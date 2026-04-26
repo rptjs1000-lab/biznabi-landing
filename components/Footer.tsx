@@ -1,9 +1,14 @@
 'use client'
 
 import Link from 'next/link'
+import { usePathname } from 'next/navigation'
 
 export default function Footer() {
+  const pathname = usePathname()
+  const isHome = pathname === '/'
+
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
+    if (!isHome) return
     e.preventDefault()
     if (targetId === '#hero') {
       window.scrollTo({ top: 0, behavior: 'smooth' })
@@ -16,6 +21,8 @@ export default function Footer() {
       window.scrollTo({ top, behavior: 'smooth' })
     }
   }
+
+  const hashHref = (hash: string) => (isHome ? hash : `/${hash}`)
 
   return (
     <footer className="pt-16 pb-8" style={{ backgroundColor: '#091D38' }}>
@@ -55,11 +62,12 @@ export default function Footer() {
           <div className="md:text-right">
             <h4 className="font-bold text-white text-sm mb-4">바로가기</h4>
             <ul className="space-y-2">
-              <li><a href="#pain-point" onClick={(e) => handleClick(e, '#pain-point')} className="text-white/50 text-sm hover:text-skyblue transition-colors">서비스 소개</a></li>
-              <li><a href="#features" onClick={(e) => handleClick(e, '#features')} className="text-white/50 text-sm hover:text-skyblue transition-colors">주요 기능</a></li>
-              <li><a href="#packages" onClick={(e) => handleClick(e, '#packages')} className="text-white/50 text-sm hover:text-skyblue transition-colors">요금 안내</a></li>
-              <li><a href="#faq" onClick={(e) => handleClick(e, '#faq')} className="text-white/50 text-sm hover:text-skyblue transition-colors">자주 묻는 질문</a></li>
-              <li><a href="#contact" onClick={(e) => handleClick(e, '#contact')} className="text-white/50 text-sm hover:text-skyblue transition-colors">상담 신청</a></li>
+              <li><a href={hashHref('#pain-point')} onClick={(e) => handleClick(e, '#pain-point')} className="text-white/50 text-sm hover:text-skyblue transition-colors">서비스 소개</a></li>
+              <li><a href={hashHref('#features')} onClick={(e) => handleClick(e, '#features')} className="text-white/50 text-sm hover:text-skyblue transition-colors">주요 기능</a></li>
+              <li><a href={hashHref('#packages')} onClick={(e) => handleClick(e, '#packages')} className="text-white/50 text-sm hover:text-skyblue transition-colors">요금 안내</a></li>
+              <li><Link href="/portfolio" className="text-white/50 text-sm hover:text-skyblue transition-colors">포트폴리오</Link></li>
+              <li><a href={hashHref('#faq')} onClick={(e) => handleClick(e, '#faq')} className="text-white/50 text-sm hover:text-skyblue transition-colors">자주 묻는 질문</a></li>
+              <li><a href={hashHref('#contact')} onClick={(e) => handleClick(e, '#contact')} className="text-white/50 text-sm hover:text-skyblue transition-colors">상담 신청</a></li>
             </ul>
           </div>
         </div>

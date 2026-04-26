@@ -7,6 +7,12 @@ export default function sitemap() {
       priority: 1,
     },
     {
+      url: 'https://biznabi.com/portfolio',
+      lastModified: new Date(),
+      changeFrequency: 'monthly' as const,
+      priority: 0.8,
+    },
+    {
       url: 'https://biznabi.com/privacy',
       lastModified: new Date(),
       changeFrequency: 'yearly' as const,
