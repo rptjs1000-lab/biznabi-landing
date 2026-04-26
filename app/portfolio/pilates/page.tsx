@@ -131,7 +131,7 @@ export default function PilatesDemo() {
             {[
               { name: '원장 지나', spec: 'PMA 자격 / 10년차', img: 'https://images.unsplash.com/photo-1571019614242-c5c5dee9f50b?w=600&q=80' },
               { name: '강사 도연', spec: '리포머 전문 / 7년차', img: 'https://images.unsplash.com/photo-1518310383802-640c2de311b2?w=600&q=80' },
-              { name: '강사 수민', spec: '재활·자세 교정 / 6년차', img: 'https://images.unsplash.com/photo-1599447332411-fd2bbe39d2f7?w=600&q=80' },
+              { name: '강사 수민', spec: '재활·자세 교정 / 6년차', img: 'https://images.unsplash.com/photo-1545205597-3d9d02c29597?w=600&q=80' },
             ].map((d) => (
               <div key={d.name} className="text-center">
                 <div className="aspect-square rounded-2xl overflow-hidden mb-4 bg-white">

@@ -129,7 +129,7 @@ export default function PrecisionMfgDemo() {
             {[
               { src: 'https://images.unsplash.com/photo-1581092446327-9b52bd1570c2?w=600&q=80', title: '자동차 부품' },
               { src: 'https://images.unsplash.com/photo-1518770660439-4636190af475?w=600&q=80', title: '반도체 지그' },
-              { src: 'https://images.unsplash.com/photo-1581093458791-9d3e07c5b6f1?w=600&q=80', title: '디스플레이 부품' },
+              { src: 'https://images.unsplash.com/photo-1593642632559-0c6d3fc62b89?w=600&q=80', title: '디스플레이 부품' },
               { src: 'https://images.unsplash.com/photo-1517420704952-d9f39e95b43e?w=600&q=80', title: '의료기기 부품' },
             ].map((p) => (
               <div key={p.title} className="rounded-lg overflow-hidden border" style={{ borderColor: '#E2E8F0' }}>
