@@ -1,5 +1,7 @@
 'use client'
 
+import Link from 'next/link'
+
 export default function Footer() {
   const handleClick = (e: React.MouseEvent<HTMLAnchorElement>, targetId: string) => {
     e.preventDefault()
@@ -63,6 +65,15 @@ export default function Footer() {
         </div>
 
         <div className="border-t border-white/10 pt-8 text-center">
+          <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 mb-3 text-xs">
+            <Link href="/privacy" className="text-white/50 hover:text-skyblue transition-colors">
+              개인정보처리방침
+            </Link>
+            <span className="text-white/20" aria-hidden="true">·</span>
+            <Link href="/terms" className="text-white/50 hover:text-skyblue transition-colors">
+              이용약관
+            </Link>
+          </div>
           <p className="text-white/30 text-xs">&copy; 2026 비즈나비 (BIZNABI). All rights reserved.</p>
         </div>
       </div>

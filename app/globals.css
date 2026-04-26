@@ -127,3 +127,75 @@ html {
 .mobile-menu.open {
   max-height: 400px;
 }
+
+/* Legal documents (privacy, terms) */
+.legal-doc h2 {
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: #0B2545;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 0.5rem;
+  border-bottom: 1px solid #E2E8F0;
+}
+.legal-doc h3 {
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: #0B2545;
+  margin-top: 1.75rem;
+  margin-bottom: 0.75rem;
+}
+.legal-doc p {
+  margin-bottom: 1rem;
+  font-size: 0.95rem;
+}
+.legal-doc ul, .legal-doc ol {
+  margin: 0.75rem 0 1.25rem 0;
+  padding-left: 1.5rem;
+}
+.legal-doc ul {
+  list-style: disc;
+}
+.legal-doc ol {
+  list-style: decimal;
+}
+.legal-doc li {
+  margin-bottom: 0.4rem;
+  font-size: 0.95rem;
+}
+.legal-doc table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0 1.5rem 0;
+  font-size: 0.9rem;
+}
+.legal-doc th, .legal-doc td {
+  border: 1px solid #E2E8F0;
+  padding: 0.6rem 0.75rem;
+  text-align: left;
+  vertical-align: top;
+}
+.legal-doc th {
+  background: #F8FAFC;
+  font-weight: 600;
+  color: #0B2545;
+}
+.legal-doc strong {
+  color: #0B2545;
+  font-weight: 600;
+}
+.legal-doc a {
+  color: #1B6AAA;
+  text-decoration: underline;
+}
+.legal-doc a:hover {
+  color: #4AADCF;
+}
+.legal-doc .legal-meta {
+  background: #F8FAFC;
+  border: 1px solid #E2E8F0;
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+  font-size: 0.9rem;
+}
