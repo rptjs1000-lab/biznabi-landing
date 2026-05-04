@@ -36,7 +36,8 @@ export default function Navbar() {
   }, [isHome])
 
   const hashHref = (hash: string) => (isHome ? hash : `/${hash}`)
-  const solid = scrolled || mobileOpen || !isHome
+  // Hero 배경이 밝은 베이지 톤이라 항상 solid (흰 배경 + navy 글자)
+  const solid = scrolled || mobileOpen || true
 
   return (
     <nav
@@ -62,24 +63,24 @@ export default function Navbar() {
           </Link>
 
           {/* Desktop Menu */}
-          <div className="hidden md:flex items-center gap-8">
+          <div className="hidden md:flex items-center gap-7">
             <a
-              href={hashHref('#pain-point')}
-              onClick={(e) => handleHashClick(e, '#pain-point')}
+              href={hashHref('#solution')}
+              onClick={(e) => handleHashClick(e, '#solution')}
               className={`text-sm font-medium transition-colors ${
                 solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
               }`}
             >
-              서비스
+              솔루션
             </a>
             <a
-              href={hashHref('#features')}
-              onClick={(e) => handleHashClick(e, '#features')}
+              href={hashHref('#industries')}
+              onClick={(e) => handleHashClick(e, '#industries')}
               className={`text-sm font-medium transition-colors ${
                 solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
               }`}
             >
-              기능
+              업종
             </a>
             <a
               href={hashHref('#packages')}
@@ -90,6 +91,15 @@ export default function Navbar() {
             >
               요금
             </a>
+            <a
+              href={hashHref('#features')}
+              onClick={(e) => handleHashClick(e, '#features')}
+              className={`text-sm font-medium transition-colors ${
+                solid ? 'text-slate-600 hover:text-navy' : 'text-white/80 hover:text-white'
+              }`}
+            >
+              기능
+            </a>
             <Link
               href="/portfolio"
               className={`text-sm font-medium transition-colors ${
@@ -98,6 +108,13 @@ export default function Navbar() {
             >
               포트폴리오
             </Link>
+            <a
+              href="https://app.biznabi.com/login"
+              aria-label="비즈나비 시스템 로그인"
+              className="text-sm font-bold text-navy border-2 border-navy/40 px-5 py-2 rounded-lg hover:bg-navy hover:text-white transition-all"
+            >
+              로그인
+            </a>
             <a
               href="https://pf.kakao.com/_xhGMjX/chat"
               target="_blank"
@@ -135,10 +152,19 @@ export default function Navbar() {
         {/* Mobile Menu */}
         <div className={`mobile-menu md:hidden ${mobileOpen ? 'open' : ''}`}>
           <div className="pb-4 space-y-2 border-t border-slate-100 pt-3">
-            <a href={hashHref('#pain-point')} onClick={(e) => handleHashClick(e, '#pain-point')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">서비스</a>
-            <a href={hashHref('#features')} onClick={(e) => handleHashClick(e, '#features')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">기능</a>
+            <a href={hashHref('#solution')} onClick={(e) => handleHashClick(e, '#solution')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">솔루션</a>
+            <a href={hashHref('#industries')} onClick={(e) => handleHashClick(e, '#industries')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">업종</a>
             <a href={hashHref('#packages')} onClick={(e) => handleHashClick(e, '#packages')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">요금</a>
+            <a href={hashHref('#features')} onClick={(e) => handleHashClick(e, '#features')} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">기능</a>
             <Link href="/portfolio" onClick={() => setMobileOpen(false)} className="block py-2 text-sm font-medium text-slate-600 hover:text-navy">포트폴리오</Link>
+            <a
+              href="https://app.biznabi.com/login"
+              onClick={() => setMobileOpen(false)}
+              aria-label="비즈나비 시스템 로그인"
+              className="inline-block mt-2 mr-2 text-sm font-bold text-navy border-2 border-navy/40 px-4 py-2 rounded-lg"
+            >
+              로그인
+            </a>
             <a
               href="https://pf.kakao.com/_xhGMjX/chat"
               target="_blank"

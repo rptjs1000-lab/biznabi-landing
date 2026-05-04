@@ -3,7 +3,8 @@ export default function robots() {
     rules: {
       userAgent: '*',
       allow: '/',
+      disallow: ['/login', '/dashboard', '/work', '/admin', '/client'],
     },
-    sitemap: 'https://biznabi.co.kr/sitemap.xml',
+    sitemap: 'https://biznabi.com/sitemap.xml',
   }
 }

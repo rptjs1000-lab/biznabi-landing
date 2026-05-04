@@ -5,7 +5,7 @@ import Footer from '@/components/Footer'
 
 export const metadata: Metadata = {
   title: '포트폴리오 | 비즈나비',
-  description: '비즈나비가 제작한 업종별 홈페이지 샘플. 인테리어·제조업·미용실·필라테스 등 소상공인을 위한 반응형 홈페이지 + 매장 자동화 데모.',
+  description: '비즈나비가 제작한 업종별 홈페이지 샘플. 청소·인테리어 주력 + 미용실·필라테스 등 현장에서 뛰는 사장님을 위한 반응형 홈페이지 + 운영 자동화 데모.',
   alternates: {
     canonical: 'https://biznabi.com/portfolio',
   },
@@ -23,7 +23,18 @@ interface SampleCard {
   badgeText: string
 }
 
-const samples: SampleCard[] = [
+const tier1Samples: SampleCard[] = [
+  {
+    slug: 'cleaning-service',
+    industry: '청소업',
+    brandName: '맑음 청소',
+    tagline: '깨끗하게, 정성껏, 약속한 그대로',
+    description: '청소업 사장님을 위한 신뢰 기반 디자인. 입주·이사·정기·사무실·배관 청소 안내 + 시공 사례 + 4단계 공정 + 견적 문의 플로우.',
+    imageUrl: 'https://images.unsplash.com/photo-1581578731548-c64695cc6952?w=800&q=80',
+    accentColor: '#5BA88A',
+    badgeColor: '#E8F0EC',
+    badgeText: '청소업',
+  },
   {
     slug: 'maru-interior',
     industry: '인테리어',
@@ -35,17 +46,9 @@ const samples: SampleCard[] = [
     badgeColor: '#F5F0E8',
     badgeText: '인테리어',
   },
-  {
-    slug: 'precision-mfg',
-    industry: '제조업',
-    brandName: '한성정밀(주)',
-    tagline: '정밀이 기술이 되다',
-    description: '다크 인더스트리얼 B2B 톤. 다국어(한·영) 지원, 제품 카탈로그, 인증 현황, 견적 RFQ 플로우.',
-    imageUrl: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80',
-    accentColor: '#2563EB',
-    badgeColor: '#DBEAFE',
-    badgeText: '제조업 / B2B',
-  },
+]
+
+const tier2Samples: SampleCard[] = [
   {
     slug: 'beauty-salon',
     industry: '미용실',
@@ -67,6 +70,17 @@ const samples: SampleCard[] = [
     accentColor: '#7A9B7E',
     badgeColor: '#E8F0E8',
     badgeText: '필라테스',
+  },
+  {
+    slug: 'precision-mfg',
+    industry: '제조업',
+    brandName: '한성정밀(주)',
+    tagline: '정밀이 기술이 되다',
+    description: '다크 인더스트리얼 B2B 톤. 다국어(한·영) 지원, 제품 카탈로그, 인증 현황, 견적 RFQ 플로우.',
+    imageUrl: 'https://images.unsplash.com/photo-1565008447742-97f6f38c985c?w=800&q=80',
+    accentColor: '#2563EB',
+    badgeColor: '#DBEAFE',
+    badgeText: '제조업 / B2B',
   },
 ]
 
@@ -102,12 +116,14 @@ export default function PortfolioPage() {
         {/* Sample Grid */}
         <section className="py-16 md:py-20">
           <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8">
-              {samples.map((s) => (
+            {/* Tier 1 — 주력 업종 */}
+            <p className="text-blue font-semibold text-sm mb-4">주력 업종</p>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-8 mb-14">
+              {tier1Samples.map((s) => (
                 <Link
                   key={s.slug}
                   href={`/portfolio/${s.slug}`}
-                  className="group block bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-slate-200 hover:shadow-xl transition-all duration-300"
+                  className="group block bg-white rounded-2xl overflow-hidden border-2 border-skyblue/30 hover:border-skyblue/60 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-[16/10] overflow-hidden bg-slate-100 relative">
                     <img
@@ -135,6 +151,49 @@ export default function PortfolioPage() {
                     >
                       데모 보기
                       <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
+                        <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
+                      </svg>
+                    </span>
+                  </div>
+                </Link>
+              ))}
+            </div>
+
+            {/* Tier 2 — 그 외 사례 */}
+            <p className="text-slate-500 font-semibold text-sm mb-4">그 외 사례</p>
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5">
+              {tier2Samples.map((s) => (
+                <Link
+                  key={s.slug}
+                  href={`/portfolio/${s.slug}`}
+                  className="group block bg-white rounded-2xl overflow-hidden border border-slate-100 hover:border-slate-200 hover:shadow-lg transition-all duration-300"
+                >
+                  <div className="aspect-[16/10] overflow-hidden bg-slate-100 relative">
+                    <img
+                      src={s.imageUrl}
+                      alt={`${s.brandName} 데모 미리보기`}
+                      className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      loading="lazy"
+                    />
+                    <span
+                      className="absolute top-3 left-3 px-2.5 py-0.5 rounded-full text-xs font-semibold"
+                      style={{ backgroundColor: s.badgeColor, color: s.accentColor }}
+                    >
+                      {s.badgeText}
+                    </span>
+                  </div>
+                  <div className="p-5">
+                    <h3 className="text-lg font-bold text-navy mb-1">{s.brandName}</h3>
+                    <p className="text-xs text-slate-500 italic mb-2">&ldquo;{s.tagline}&rdquo;</p>
+                    <p className="text-xs md:text-sm text-slate-500 mb-3" style={{ wordBreak: 'keep-all', lineHeight: '1.65' }}>
+                      {s.description}
+                    </p>
+                    <span
+                      className="inline-flex items-center gap-1 text-xs font-semibold group-hover:gap-1.5 transition-all"
+                      style={{ color: s.accentColor }}
+                    >
+                      데모 보기
+                      <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5">
                         <path d="M5 12h14M13 5l7 7-7 7" strokeLinecap="round" strokeLinejoin="round" />
                       </svg>
                     </span>

@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import PainPoint from '@/components/PainPoint'
 import Solution from '@/components/Solution'
+import Industries from '@/components/Industries'
 import Packages from '@/components/Packages'
 import Features from '@/components/Features'
 import FAQ from '@/components/FAQ'
@@ -32,6 +33,7 @@ export default function Home() {
       <Hero />
       <PainPoint />
       <Solution />
+      <Industries />
       <Packages />
       <Features />
       <FAQ />
