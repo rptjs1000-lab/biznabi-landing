@@ -125,7 +125,10 @@ export default function Hero() {
               className="text-base sm:text-lg text-slate-200 mb-10 fade-up"
               style={{ lineHeight: '1.8', wordBreak: 'keep-all' }}
             >
-              홈페이지부터 앱·자동화·AI까지, 필요한 건 모듈 단위로 만들고<br />
+              홈페이지부터 앱·자동화·AI까지,
+              <br className="sm:hidden" />{' '}
+              필요한 건 모듈 단위로 만들고{' '}
+              <br className="hidden sm:inline" />
               <span className="font-bold text-white">납기 후에도 함께하는</span> 기술 파트너입니다.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 fade-up justify-center">
