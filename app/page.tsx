@@ -2,11 +2,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import PainPoint from '@/components/PainPoint'
 import Solution from '@/components/Solution'
-import Industries from '@/components/Industries'
-import Packages from '@/components/Packages'
-import Features from '@/components/Features'
-import FAQ from '@/components/FAQ'
-import Contact from '@/components/Contact'
+import Portfolio from '@/components/Portfolio'
 import Footer from '@/components/Footer'
 
 const jsonLd = {
@@ -14,12 +10,12 @@ const jsonLd = {
   '@type': 'ProfessionalService',
   name: '비즈나비',
   url: 'https://biznabi.com',
-  description: '소상공인을 위한 홈페이지 제작 및 매장 자동화 에이전시',
+  description: '필요한 소프트웨어를 상담으로 제작하는 기술 파트너. 홈페이지·웹앱·업무 자동화·AI까지.',
   areaServed: {
     '@type': 'Country',
     name: 'KR',
   },
-  serviceType: ['홈페이지 제작', '매장 예약 자동화', '고객 관리 자동화', '알림톡 자동화'],
+  serviceType: ['맞춤 소프트웨어 제작', '홈페이지 제작', '웹앱 개발', '업무 자동화', 'AI 개발'],
 }
 
 export default function Home() {
@@ -33,11 +29,7 @@ export default function Home() {
       <Hero />
       <PainPoint />
       <Solution />
-      <Industries />
-      <Packages />
-      <Features />
-      <FAQ />
-      <Contact />
+      <Portfolio />
       <Footer />
     </>
   )

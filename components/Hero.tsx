@@ -1,8 +1,36 @@
 'use client'
 
-import { useEffect } from 'react'
+import { useEffect, useRef, useState } from 'react'
+
+const SLIDES = [
+  '/hero/slide-1.jpg',
+  '/hero/slide-2.jpg',
+  '/hero/slide-4.jpg',
+]
 
 export default function Hero() {
+  const [active, setActive] = useState(0)
+  const prevRef = useRef(0) // 직전 슬라이드 (페이드인 동안 밑에 깔아 둠)
+
+  const goTo = (next: number) => {
+    setActive((cur) => {
+      prevRef.current = cur
+      return next
+    })
+  }
+
+  // 배경 슬라이드 자동 전환 (5초)
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActive((cur) => {
+        prevRef.current = cur
+        return (cur + 1) % SLIDES.length
+      })
+    }, 5000)
+    return () => clearInterval(timer)
+  }, [])
+
+  // 카피 fade-up 애니메이션
   useEffect(() => {
     const fadeObserver = new IntersectionObserver(
       (entries) => {
@@ -42,78 +70,100 @@ export default function Hero() {
   }
 
   return (
-    <section
-      id="hero"
-      className="relative min-h-screen overflow-hidden"
-      style={{ background: 'linear-gradient(to right, #FAF5EC 0%, #F5EEE0 60%, #F0E6D2 100%)' }}
-    >
-      <div className="min-h-screen grid grid-cols-1 md:grid-cols-2 items-center pt-20 md:pt-0">
-        {/* Left: Copy */}
-        <div className="px-6 sm:px-10 md:pl-10 md:pr-6 lg:pl-14 lg:pr-8 py-12 md:py-0 order-2 md:order-1">
-          <div className="max-w-xl mx-auto md:ml-auto md:mr-0">
-            <p
-              className="text-blue font-bold text-sm md:text-base tracking-wide mb-4 fade-up"
-            >
-              청소·인테리어 사장님을 위한 <span className="text-navy">자동화 파트너</span>
+    <section id="hero" className="relative min-h-screen overflow-hidden bg-navy">
+      {/* 배경 슬라이드쇼 (isolate: 슬라이드 z-index를 이 안에 가둬 오버레이를 가리지 않게) */}
+      <div className="absolute inset-0 isolate">
+        {SLIDES.map((src, i) => {
+          const isActive = i === active
+          const isPrev = i === prevRef.current
+          return (
+            <div
+              key={src}
+              className="absolute inset-0 bg-cover bg-center ease-in-out"
+              style={{
+                backgroundImage: `url(${src})`,
+                // 활성·직전 슬라이드는 떠 있고(꽉 채움), 활성만 페이드인
+                opacity: isActive || isPrev ? 1 : 0,
+                zIndex: isActive ? 2 : isPrev ? 1 : 0,
+                transitionProperty: 'opacity',
+                transitionDuration: isActive ? '1500ms' : '0ms',
+              }}
+              aria-hidden="true"
+            />
+          )
+        })}
+      </div>
+
+      {/* 가독성 확보용 네이비 오버레이 (좌측 진하게) */}
+      <div
+        className="absolute inset-0"
+        style={{
+          background:
+            'linear-gradient(to bottom, rgba(9,29,56,0.82) 0%, rgba(11,37,69,0.76) 50%, rgba(9,29,56,0.86) 100%)',
+        }}
+        aria-hidden="true"
+      />
+
+      {/* 카피 */}
+      <div className="relative z-10 min-h-screen flex items-center justify-center">
+        <div className="w-full max-w-7xl mx-auto px-6 sm:px-10 lg:px-14 pt-20 md:pt-0">
+          <div className="max-w-3xl mx-auto text-center">
+            <p className="text-skyblue font-bold text-sm md:text-base tracking-wide mb-4 fade-up">
+              주문 제작 소프트웨어 · <span className="text-white">떠나지 않는 기술 파트너</span>
             </p>
             <h1
-              className="text-3xl sm:text-4xl md:text-4xl lg:text-5xl xl:text-6xl font-extrabold text-navy mb-6 fade-up"
-              style={{ lineHeight: '1.35', wordBreak: 'keep-all' }}
+              className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-6 fade-up"
+              style={{ lineHeight: '1.3', wordBreak: 'keep-all' }}
             >
-              견적·일정·고객관리,<br />아직도 사장님이 직접<br />다 하고 계신가요?
+              기술은 저희가 만들게요.<br />비즈니스에만 집중하세요.
             </h1>
             <div
-              className="w-12 h-1 rounded-full mb-6 fade-up"
-              style={{ background: 'linear-gradient(to right, #C9A66B, #A68B6E)' }}
+              className="w-12 h-1 rounded-full mb-6 mx-auto fade-up"
+              style={{ background: 'linear-gradient(to right, #4AADCF, #7DD3E8)' }}
             />
             <p
-              className="text-base sm:text-lg text-slate-600 mb-10 fade-up"
+              className="text-base sm:text-lg text-slate-200 mb-10 fade-up"
               style={{ lineHeight: '1.8', wordBreak: 'keep-all' }}
             >
-              반복 업무는 줄이고, 놓치던 고객은 잡아드릴게요.<br />
-              사장님은 <span className="font-bold text-navy">더 중요한 일에 집중</span>하세요.
+              홈페이지부터 앱·자동화·AI까지, 필요한 건 모듈 단위로 만들고<br />
+              <span className="font-bold text-white">납기 후에도 함께하는</span> 기술 파트너입니다.
             </p>
-            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 fade-up">
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 fade-up justify-center">
               <a
                 href="https://pf.kakao.com/_xhGMjX/chat"
                 target="_blank"
                 rel="noopener noreferrer"
-                aria-label="카카오톡 채널 비즈나비에서 무료 자동화 진단 받기 (새 창)"
-                className="btn-primary text-white font-bold px-7 py-3.5 rounded-xl text-base shadow-lg shadow-navy/20 text-center"
+                aria-label="카카오톡 채널 비즈나비에서 무료 상담 받기 (새 창)"
+                className="bg-white text-navy font-bold px-7 py-3.5 rounded-xl text-base shadow-lg shadow-black/30 hover:bg-slate-100 transition-all text-center"
               >
-                무료 자동화 진단 받기
+                무료 상담 받기
               </a>
               <a
                 href="#pain-point"
                 onClick={(e) => handleClick(e, '#pain-point')}
-                className="border-2 border-navy/30 text-navy font-semibold px-7 py-3.5 rounded-xl text-base hover:bg-navy hover:text-white transition-all text-center"
+                className="border-2 border-white/40 text-white font-semibold px-7 py-3.5 rounded-xl text-base hover:bg-white hover:text-navy transition-all text-center"
               >
                 서비스 알아보기
               </a>
             </div>
           </div>
         </div>
-
-        {/* Right: Image */}
-        <div className="relative order-1 md:order-2 h-[40vh] sm:h-[50vh] md:h-screen fade-up">
-          <img
-            src="/hero-partner.png"
-            alt="청소·인테리어 사장님과 함께 성장하는 비즈나비 파트너"
-            className="w-full h-full object-cover"
-            style={{
-              objectPosition: '85% center',
-              maskImage: 'linear-gradient(to right, transparent 0%, black 18%)',
-              WebkitMaskImage: 'linear-gradient(to right, transparent 0%, black 18%)',
-            }}
-          />
-        </div>
       </div>
 
-      {/* Bounce Arrow */}
-      <div className="absolute bottom-8 left-1/2 -translate-x-1/2 bounce-arrow hidden md:block">
-        <svg className="w-6 h-6 text-navy/40" fill="none" stroke="currentColor" strokeWidth="2" viewBox="0 0 24 24">
-          <path strokeLinecap="round" strokeLinejoin="round" d="M19 9l-7 7-7-7" />
-        </svg>
+      {/* 슬라이드 인디케이터 */}
+      <div className="absolute bottom-10 left-1/2 -translate-x-1/2 z-10 flex gap-2.5">
+        {SLIDES.map((_, i) => (
+          <button
+            key={i}
+            onClick={() => goTo(i)}
+            aria-label={`슬라이드 ${i + 1}로 이동`}
+            className="h-2 rounded-full transition-all duration-300"
+            style={{
+              width: i === active ? '28px' : '8px',
+              background: i === active ? '#7DD3E8' : 'rgba(255,255,255,0.4)',
+            }}
+          />
+        ))}
       </div>
     </section>
   )

@@ -38,7 +38,7 @@ export default function Footer() {
               />
             </div>
             <p className="text-white/50 text-sm mb-4" style={{ lineHeight: '1.7' }}>
-              소상공인을 위한<br />홈페이지 제작 + 매장 자동화 에이전시
+              필요한 소프트웨어를 상담으로 만들어 드리는<br />기술 파트너
             </p>
             <p className="text-white/40 text-xs mb-4" style={{ lineHeight: '1.7' }}>
               상담·견적 문의는 카카오톡 채널 <span className="text-skyblue">@비즈나비</span> 로 편하게 연락주세요.
@@ -63,11 +63,8 @@ export default function Footer() {
             <h4 className="font-bold text-white text-sm mb-4">바로가기</h4>
             <ul className="space-y-2">
               <li><a href={hashHref('#pain-point')} onClick={(e) => handleClick(e, '#pain-point')} className="text-white/50 text-sm hover:text-skyblue transition-colors">서비스 소개</a></li>
-              <li><a href={hashHref('#features')} onClick={(e) => handleClick(e, '#features')} className="text-white/50 text-sm hover:text-skyblue transition-colors">주요 기능</a></li>
-              <li><a href={hashHref('#packages')} onClick={(e) => handleClick(e, '#packages')} className="text-white/50 text-sm hover:text-skyblue transition-colors">요금 안내</a></li>
-              <li><Link href="/portfolio" className="text-white/50 text-sm hover:text-skyblue transition-colors">포트폴리오</Link></li>
-              <li><a href={hashHref('#faq')} onClick={(e) => handleClick(e, '#faq')} className="text-white/50 text-sm hover:text-skyblue transition-colors">자주 묻는 질문</a></li>
-              <li><a href={hashHref('#contact')} onClick={(e) => handleClick(e, '#contact')} className="text-white/50 text-sm hover:text-skyblue transition-colors">상담 신청</a></li>
+              <li><a href={hashHref('#solution')} onClick={(e) => handleClick(e, '#solution')} className="text-white/50 text-sm hover:text-skyblue transition-colors">솔루션</a></li>
+              <li><a href={hashHref('#portfolio')} onClick={(e) => handleClick(e, '#portfolio')} className="text-white/50 text-sm hover:text-skyblue transition-colors">포트폴리오</a></li>
             </ul>
           </div>
         </div>

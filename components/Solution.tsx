@@ -2,21 +2,46 @@
 
 import { useEffect } from 'react'
 
-const packs = [
+const answers = [
   {
-    number: '①',
-    title: '랜딩 페이지',
-    desc: '청소업체 홍보·견적 문의 받는 마케팅 홈페이지. 카톡 채널 연결 + SEO 기본 포함.',
+    pain: '납기 끝나면 연락이 끊겨요',
+    title: '떠나지 않습니다',
+    desc: '납기 후에도 유지보수·기능 추가까지 함께하는 지속 파트너로 남습니다.',
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M4.5 12.75l6 6 9-13.5" />
+      </svg>
+    ),
   },
   {
-    number: '②',
-    title: '사장 대시보드',
-    desc: '문의·일정·견적·고객·매출·직원을 한 화면에서 관리. PC·태블릿 사용.',
+    pain: '프리랜서는 갑자기 끊겨요',
+    title: '멈추지 않습니다',
+    desc: '1인 의존이 아니라 파트너 네트워크로, 한 사람의 부재에 일이 멈추지 않습니다.',
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M18 18.72a9.094 9.094 0 003.741-.479 3 3 0 00-4.682-2.72m.94 3.198l.001.031c0 .225-.012.447-.037.666A11.944 11.944 0 0112 21c-2.17 0-4.207-.576-5.963-1.584A6.062 6.062 0 016 18.719m12 0a5.971 5.971 0 00-.941-3.197m0 0A5.995 5.995 0 0012 12.75a5.995 5.995 0 00-5.058 2.772m0 0a3 3 0 00-4.681 2.72 8.986 8.986 0 003.74.477m.94-3.197a5.971 5.971 0 00-.94 3.197M15 6.75a3 3 0 11-6 0 3 3 0 016 0zm6 3a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0zm-13.5 0a2.25 2.25 0 11-4.5 0 2.25 2.25 0 014.5 0z" />
+      </svg>
+    ),
   },
   {
-    number: '③',
-    title: '직원 PWA',
-    desc: '핸드폰 홈화면 추가 → 앱처럼 사용. 현장 체크인·사진·체크리스트·완료 보고까지.',
+    pain: '에이전시는 견적부터 부담',
+    title: '필요한 만큼만',
+    desc: '풀패키지 강요 없이, 지금 필요한 기능부터 모듈 단위로 작게 시작할 수 있습니다.',
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M3.75 6.75h16.5M3.75 12h16.5m-16.5 5.25H12" />
+      </svg>
+    ),
+  },
+  {
+    pain: '자동화는 막막하기만 해요',
+    title: '막막하지 않게',
+    desc: '무엇을 자동화할지부터 함께 설계하고, 사장님이 모르던 부분까지 역제안합니다.',
+    icon: (
+      <svg className="w-7 h-7" fill="none" stroke="currentColor" strokeWidth="1.8" viewBox="0 0 24 24">
+        <path strokeLinecap="round" strokeLinejoin="round" d="M12 18v-5.25m0 0a6.01 6.01 0 001.5-.189m-1.5.189a6.01 6.01 0 01-1.5-.189m3.75 7.478a12.06 12.06 0 01-4.5 0m3.75 2.383a14.406 14.406 0 01-3 0M14.25 18v-.192c0-.983.658-1.823 1.508-2.316a7.5 7.5 0 10-7.517 0c.85.493 1.509 1.333 1.509 2.316V18" />
+      </svg>
+    ),
   },
 ]
 
@@ -51,45 +76,38 @@ export default function Solution() {
   }, [])
 
   return (
-    <section id="solution" className="py-20 md:py-28 bg-white">
+    <section id="solution" className="py-20 md:py-28 bg-[#091D38]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16 items-center">
-          {/* Image */}
-          <div className="fade-up order-2 lg:order-1">
-            <div className="relative rounded-2xl overflow-hidden shadow-2xl">
-              <img
-                src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?auto=format&fit=crop&w=800&q=90"
-                alt="대시보드 이미지"
-                className="w-full h-auto"
-              />
-              <div className="absolute inset-0 bg-gradient-to-t from-navy/20 to-transparent"></div>
-            </div>
-          </div>
+        <div className="text-center mb-16">
+          <p className="text-skyblue font-semibold text-sm mb-3 fade-up">그래서, 비즈나비는</p>
+          <h2
+            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white fade-up"
+            style={{ wordBreak: 'keep-all', lineHeight: '1.4' }}
+          >
+            외주의 답답함,<br className="sm:hidden" /> 비즈나비는 이렇게 풉니다
+          </h2>
+        </div>
 
-          {/* Text */}
-          <div className="order-1 lg:order-2">
-            <p className="text-blue font-semibold text-sm mb-3 fade-up">비즈나비 3-Pack 솔루션</p>
-            <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-navy mb-6 fade-up" style={{ wordBreak: 'keep-all', lineHeight: '1.4' }}>
-              청소·인테리어 사장님을 위한<br />통합 운영 시스템
-            </h2>
-            <p className="text-slate-600 text-base md:text-lg mb-8 fade-up" style={{ lineHeight: '1.8', wordBreak: 'keep-all' }}>
-              홈페이지·운영·현장을 한 흐름으로. 마케팅부터 직원 관리까지 한 시스템에서 해결하는 3-Pack 구성입니다.
-            </p>
-
-            <div className="space-y-5 fade-up">
-              {packs.map((p, i) => (
-                <div key={i} className="flex items-start gap-4">
-                  <div className="w-11 h-11 rounded-lg bg-skyblue/10 flex items-center justify-center shrink-0 mt-0.5">
-                    <span className="text-skyblue font-extrabold text-xl">{p.number}</span>
-                  </div>
-                  <div>
-                    <h4 className="font-bold text-navy mb-1">{p.title}</h4>
-                    <p className="text-slate-500 text-sm" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>{p.desc}</p>
-                  </div>
-                </div>
-              ))}
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {answers.map((a, i) => (
+            <div
+              key={i}
+              className="bg-white/[0.04] rounded-2xl p-7 border border-white/10 card-hover fade-up"
+            >
+              <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue to-skyblue text-white flex items-center justify-center mb-5">
+                {a.icon}
+              </div>
+              <p className="text-xs text-white/40 mb-1.5" style={{ wordBreak: 'keep-all' }}>
+                &ldquo;{a.pain}&rdquo;
+              </p>
+              <h3 className="text-lg font-bold text-white mb-2.5" style={{ wordBreak: 'keep-all' }}>
+                {a.title}
+              </h3>
+              <p className="text-white/60 text-sm" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>
+                {a.desc}
+              </p>
             </div>
-          </div>
+          ))}
         </div>
       </div>
     </section>
