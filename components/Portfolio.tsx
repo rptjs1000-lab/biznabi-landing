@@ -15,12 +15,10 @@ interface Work {
 // 직접 제작·운영 중인 소프트웨어 (실제 화면 캡쳐)
 const products: Work[] = [
   {
-    title: '낭만클럽',
+    title: '폐쇄형 공동구매 쇼핑몰',
     category: '공동구매 플랫폼 · 라이브 운영',
     desc: '폐쇄형 공동구매 커머스. 회원·상품·주문·정산까지 운영 중인 실서비스.',
     image: '/portfolio/nangman.png',
-    href: 'https://nangmanclub.kr',
-    external: true,
   },
   {
     title: 'BizNabi AI',
