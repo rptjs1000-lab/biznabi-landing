@@ -2,6 +2,7 @@ import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
 import Answers from '@/components/Answers'
 import Includes from '@/components/Includes'
+import Team from '@/components/Team'
 import Portfolio from '@/components/Portfolio'
 import Footer from '@/components/Footer'
 
@@ -30,6 +31,7 @@ export default function Home() {
         <Hero />
         <Answers />
         <Includes />
+        <Team />
         <Portfolio />
       </main>
       <Footer />
