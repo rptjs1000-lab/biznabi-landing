@@ -92,12 +92,12 @@ export default function Solution() {
           {answers.map((a, i) => (
             <div
               key={i}
-              className="bg-white/[0.04] rounded-2xl p-7 border border-white/10 card-hover fade-up"
+              className="bg-white/[0.04] rounded-2xl p-7 border border-white/10 fade-up"
             >
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue to-skyblue text-white flex items-center justify-center mb-5">
                 {a.icon}
               </div>
-              <p className="text-xs text-white/40 mb-1.5" style={{ wordBreak: 'keep-all' }}>
+              <p className="text-xs text-white/60 mb-1.5" style={{ wordBreak: 'keep-all' }}>
                 &ldquo;{a.pain}&rdquo;
               </p>
               <h3 className="text-lg font-bold text-white mb-2.5" style={{ wordBreak: 'keep-all' }}>

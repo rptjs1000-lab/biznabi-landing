@@ -67,7 +67,7 @@ export default function LegalLayout({ title, effectiveDate, version, children }:
               카카오톡 채널 @비즈나비
             </a>
           </div>
-          <p className="text-white/30 text-xs">&copy; 2026 비즈나비 (BIZNABI). All rights reserved.</p>
+          <p className="text-white/50 text-xs">&copy; 2026 비즈나비 (BIZNABI). All rights reserved.</p>
         </div>
       </footer>
     </div>

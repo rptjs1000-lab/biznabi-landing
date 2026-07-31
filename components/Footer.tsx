@@ -40,7 +40,7 @@ export default function Footer() {
             <p className="text-white/50 text-sm mb-4" style={{ lineHeight: '1.7' }}>
               필요한 소프트웨어를 상담으로 만들어 드리는<br />기술 파트너
             </p>
-            <p className="text-white/40 text-xs mb-4" style={{ lineHeight: '1.7' }}>
+            <p className="text-white/60 text-xs mb-4" style={{ lineHeight: '1.7' }}>
               상담·견적 문의는 카카오톡 채널 <span className="text-skyblue">@비즈나비</span> 로 편하게 연락주세요.
             </p>
             <a
@@ -79,7 +79,7 @@ export default function Footer() {
               이용약관
             </Link>
           </div>
-          <p className="text-white/30 text-xs">&copy; 2026 비즈나비 (BIZNABI). All rights reserved.</p>
+          <p className="text-white/50 text-xs">&copy; 2026 비즈나비 (BIZNABI). All rights reserved.</p>
         </div>
       </div>
     </footer>

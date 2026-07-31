@@ -73,8 +73,11 @@ function WorkCard({ work, large }: { work: Work; large?: boolean }) {
     </>
   )
 
-  const cardClass =
-    'group block bg-white/[0.05] rounded-2xl overflow-hidden border-2 border-white/20 hover:border-skyblue/70 hover:shadow-xl transition-all duration-300 fade-up'
+  // 링크가 있는 카드만 호버 어포던스 부여 (클릭 안 되는 카드가 클릭 유도하지 않게)
+  const isLink = Boolean(work.href)
+  const cardClass = `block bg-white/[0.05] rounded-2xl overflow-hidden border-2 border-white/20 fade-up${
+    isLink ? ' group hover:border-skyblue/70 hover:shadow-xl transition-[border-color,box-shadow] duration-300' : ''
+  }`
 
   if (work.href && work.external) {
     return (
@@ -160,7 +163,7 @@ export default function Portfolio() {
             target="_blank"
             rel="noopener noreferrer"
             aria-label="카카오톡 채널 비즈나비에서 무료 상담 받기 (새 창)"
-            className="inline-flex items-center gap-2 bg-skyblue hover:bg-skyblue/90 text-navy font-bold px-7 py-3.5 rounded-xl text-base shadow-lg shadow-skyblue/20 transition-all"
+            className="inline-flex items-center gap-2 bg-skyblue hover:bg-skyblue/90 text-navy font-bold px-7 py-3.5 rounded-xl text-base shadow-lg shadow-skyblue/20 transition-colors"
           >
             제작 상담 받기
           </a>

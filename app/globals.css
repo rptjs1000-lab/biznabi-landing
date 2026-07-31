@@ -6,11 +6,6 @@
   font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
 }
 
-.font-space {
-  font-family: 'Space Grotesk', sans-serif;
-  letter-spacing: -0.02em;
-}
-
 /* Heading line-height */
 h1, h2, h3 {
   line-height: 1.5;
@@ -19,15 +14,28 @@ p, li {
   line-height: 1.7;
 }
 
-/* Scroll animations */
+/* Scroll animations — reduced-motion 사용자는 즉시 표시 */
 .fade-up {
   opacity: 0;
   transform: translateY(30px);
-  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
 }
 .fade-up.visible {
   opacity: 1;
   transform: translateY(0);
+}
+@media (prefers-reduced-motion: no-preference) {
+  .fade-up {
+    transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+}
+@media (prefers-reduced-motion: reduce) {
+  .fade-up {
+    opacity: 1;
+    transform: none;
+  }
 }
 
 /* Nav blur */
@@ -38,94 +46,33 @@ p, li {
   box-shadow: 0 1px 3px rgba(11,37,69,0.08);
 }
 
-/* Hero overlay */
-.hero-overlay {
-  background: linear-gradient(to bottom, rgba(11,37,69,0.4) 0%, rgba(11,37,69,0.6) 60%, rgba(11,37,69,0.75) 100%);
-}
-
 /* CTA gradient */
 .btn-primary {
   background: linear-gradient(135deg, #0B2545 0%, #1B6AAA 100%);
-  transition: all 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
 .btn-primary:hover {
   background: linear-gradient(135deg, #0E3260 0%, #2A7FBF 100%);
   transform: translateY(-2px);
   box-shadow: 0 8px 25px rgba(11,37,69,0.3);
 }
-
-/* Card hover */
-.card-hover {
-  transition: all 0.3s ease;
-}
-.card-hover:hover {
-  transform: translateY(-4px);
-  box-shadow: 0 20px 40px rgba(11,37,69,0.12);
+@media (prefers-reduced-motion: reduce) {
+  .btn-primary:hover {
+    transform: none;
+  }
 }
 
-/* Process connector line */
-.process-line {
-  position: absolute;
-  top: 28px;
-  left: 50%;
-  width: 100%;
-  height: 2px;
-  background: linear-gradient(90deg, #4AADCF, #1B6AAA);
-}
-
-/* FAQ */
-.faq-answer {
-  max-height: 0;
-  overflow: hidden;
-  transition: max-height 0.35s ease, padding 0.35s ease;
-}
-.faq-answer.open {
-  max-height: 300px;
-}
-.faq-icon {
-  transition: transform 0.3s ease;
-}
-.faq-item.active .faq-icon {
-  transform: rotate(45deg);
-}
-
-/* Smooth scroll */
-html {
-  scroll-behavior: smooth;
-}
-
-/* Bounce arrow */
-@keyframes bounce-down {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(8px); }
-}
-.bounce-arrow {
-  animation: bounce-down 2s ease-in-out infinite;
-}
-
-/* Package best badge */
-.best-badge {
-  background: linear-gradient(135deg, #4AADCF, #1B6AAA);
-}
-
-/* Stats section gradient */
-.stats-bg {
-  background: linear-gradient(135deg, #091D38 0%, #0B2545 50%, #0E3260 100%);
-}
-
-/* Contact gradient */
-.contact-bg {
-  background: linear-gradient(135deg, #F8FAFC 0%, #EBF5FF 50%, #F0F9FF 100%);
-}
-
-/* Mobile menu */
+/* Mobile menu — 닫힘 상태는 visibility로 탭 순서에서도 제외 */
 .mobile-menu {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  visibility: hidden;
+  transition: max-height 0.3s ease, visibility 0s linear 0.3s;
 }
 .mobile-menu.open {
   max-height: 400px;
+  visibility: visible;
+  transition: max-height 0.3s ease, visibility 0s;
 }
 
 /* Legal documents (privacy, terms) */

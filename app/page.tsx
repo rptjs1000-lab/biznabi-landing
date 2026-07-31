@@ -26,10 +26,12 @@ export default function Home() {
         dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
       />
       <Navbar />
-      <Hero />
-      <PainPoint />
-      <Solution />
-      <Portfolio />
+      <main>
+        <Hero />
+        <PainPoint />
+        <Solution />
+        <Portfolio />
+      </main>
       <Footer />
     </>
   )

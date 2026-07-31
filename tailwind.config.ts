@@ -34,7 +34,6 @@ const config: Config = {
       },
       fontFamily: {
         pretendard: ['Pretendard Variable', 'Pretendard', 'system-ui', 'sans-serif'],
-        space: ['Space Grotesk', 'sans-serif'],
       },
     },
   },
