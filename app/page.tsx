@@ -1,7 +1,6 @@
 import Navbar from '@/components/Navbar'
 import Hero from '@/components/Hero'
-import PainPoint from '@/components/PainPoint'
-import Solution from '@/components/Solution'
+import Answers from '@/components/Answers'
 import Includes from '@/components/Includes'
 import Portfolio from '@/components/Portfolio'
 import Footer from '@/components/Footer'
@@ -29,8 +28,7 @@ export default function Home() {
       <Navbar />
       <main>
         <Hero />
-        <PainPoint />
-        <Solution />
+        <Answers />
         <Includes />
         <Portfolio />
       </main>
