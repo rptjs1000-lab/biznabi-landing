@@ -37,10 +37,10 @@ export default function Footer() {
                 style={{ height: '44px', objectFit: 'contain', filter: 'brightness(0) invert(1)' }}
               />
             </div>
-            <p className="text-white/50 text-sm mb-4" style={{ lineHeight: '1.7' }}>
+            <p className="text-white/50 text-sm mb-4">
               필요한 소프트웨어를 상담으로 만들어 드리는<br />기술 파트너
             </p>
-            <p className="text-white/60 text-xs mb-4" style={{ lineHeight: '1.7' }}>
+            <p className="text-white/60 text-xs mb-4">
               상담·견적 문의는 카카오톡 채널 <span className="text-skyblue">@비즈나비</span> 로 편하게 연락주세요.
             </p>
             <a

@@ -122,20 +122,14 @@ export default function Hero() {
             <p className="text-skyblue font-bold text-sm md:text-base tracking-wide mb-4 fade-up">
               주문 제작 소프트웨어 · <span className="text-white">떠나지 않는 기술 파트너</span>
             </p>
-            <h1
-              className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-6 fade-up"
-              style={{ lineHeight: '1.3', wordBreak: 'keep-all' }}
-            >
+            <h1 className="text-4xl sm:text-5xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold text-white mb-6 fade-up leading-[1.3] break-keep">
               기술은 저희가 만들게요.<br />비즈니스에만 집중하세요.
             </h1>
             <div
               className="w-12 h-1 rounded-full mb-6 mx-auto fade-up"
               style={{ background: 'linear-gradient(to right, #4AADCF, #7DD3E8)' }}
             />
-            <p
-              className="text-base sm:text-lg text-slate-200 mb-10 fade-up"
-              style={{ lineHeight: '1.8', wordBreak: 'keep-all' }}
-            >
+            <p className="text-base sm:text-lg text-slate-200 mb-10 fade-up break-keep">
               홈페이지부터 앱·자동화·AI까지,
               <br className="sm:hidden" />{' '}
               필요한 건 모듈 단위로 만들고{' '}

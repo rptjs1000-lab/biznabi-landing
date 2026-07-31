@@ -6,10 +6,7 @@
   font-family: 'Pretendard Variable', 'Pretendard', system-ui, sans-serif;
 }
 
-/* Heading line-height */
-h1, h2, h3 {
-  line-height: 1.5;
-}
+/* 본문 행간 — 헤딩은 각 컴포넌트의 leading-* 유틸로 지정 */
 p, li {
   line-height: 1.7;
 }

@@ -80,10 +80,7 @@ export default function Solution() {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
           <p className="text-skyblue font-semibold text-sm mb-3 fade-up">그래서, 비즈나비는</p>
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white fade-up"
-            style={{ wordBreak: 'keep-all', lineHeight: '1.4' }}
-          >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white fade-up leading-[1.4] break-keep">
             외주의 답답함,<br className="sm:hidden" /> 비즈나비는 이렇게 풉니다
           </h2>
         </div>
@@ -97,13 +94,13 @@ export default function Solution() {
               <div className="w-14 h-14 rounded-xl bg-gradient-to-br from-blue to-skyblue text-white flex items-center justify-center mb-5">
                 {a.icon}
               </div>
-              <p className="text-xs text-white/60 mb-1.5" style={{ wordBreak: 'keep-all' }}>
+              <p className="text-xs text-white/60 mb-1.5 break-keep">
                 &ldquo;{a.pain}&rdquo;
               </p>
-              <h3 className="text-lg font-bold text-white mb-2.5" style={{ wordBreak: 'keep-all' }}>
+              <h3 className="text-lg font-bold text-white mb-2.5 break-keep">
                 {a.title}
               </h3>
-              <p className="text-white/60 text-sm" style={{ lineHeight: '1.7', wordBreak: 'keep-all' }}>
+              <p className="text-white/60 text-sm break-keep">
                 {a.desc}
               </p>
             </div>

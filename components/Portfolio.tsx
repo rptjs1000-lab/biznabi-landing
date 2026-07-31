@@ -66,7 +66,7 @@ function WorkCard({ work, large }: { work: Work; large?: boolean }) {
       </div>
       <div className={large ? 'p-6' : 'p-5'}>
         <h3 className={`font-bold text-white mb-1.5 ${large ? 'text-xl' : 'text-lg'}`}>{work.title}</h3>
-        <p className="text-sm text-white/55" style={{ wordBreak: 'keep-all', lineHeight: '1.65' }}>
+        <p className="text-sm text-white/55 break-keep">
           {work.desc}
         </p>
       </div>
@@ -132,16 +132,10 @@ export default function Portfolio() {
         {/* Heading */}
         <div className="text-center mb-16">
           <p className="text-skyblue font-semibold text-sm tracking-wider mb-3 fade-up">PORTFOLIO</p>
-          <h2
-            className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white fade-up"
-            style={{ wordBreak: 'keep-all', lineHeight: '1.4' }}
-          >
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-extrabold text-white fade-up leading-[1.4] break-keep">
             필요한 소프트웨어,<br className="sm:hidden" /> 상담으로 만들어 드립니다
           </h2>
-          <p
-            className="text-base md:text-lg text-white/55 mt-4 max-w-2xl mx-auto fade-up"
-            style={{ wordBreak: 'keep-all', lineHeight: '1.7' }}
-          >
+          <p className="text-base md:text-lg text-white/55 mt-4 max-w-2xl mx-auto fade-up break-keep">
             정해진 패키지가 아니라, 사업에 필요한 걸 듣고 그대로 제작합니다.
           </p>
         </div>
@@ -155,7 +149,7 @@ export default function Portfolio() {
 
         {/* CTA */}
         <div className="text-center mt-14 fade-up">
-          <p className="text-white/60 mb-5" style={{ wordBreak: 'keep-all' }}>
+          <p className="text-white/60 mb-5 break-keep">
             만들고 싶은 소프트웨어가 있으신가요? 어떤 것이든 상담부터 시작합니다.
           </p>
           <a
@@ -165,7 +159,7 @@ export default function Portfolio() {
             aria-label="카카오톡 채널 비즈나비에서 무료 상담 받기 (새 창)"
             className="inline-flex items-center gap-2 bg-skyblue hover:bg-skyblue/90 text-navy font-bold px-7 py-3.5 rounded-xl text-base shadow-lg shadow-skyblue/20 transition-colors"
           >
-            제작 상담 받기
+            무료 상담 받기
           </a>
         </div>
       </div>

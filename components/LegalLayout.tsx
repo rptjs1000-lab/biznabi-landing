@@ -24,7 +24,7 @@ export default function LegalLayout({ title, effectiveDate, version, children }:
             href="/"
             className="text-sm font-medium text-slate-600 hover:text-navy transition-colors"
           >
-            홈으로 ←
+            ← 홈으로
           </Link>
         </div>
       </header>
@@ -32,7 +32,7 @@ export default function LegalLayout({ title, effectiveDate, version, children }:
       {/* Document Body */}
       <main className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 py-12 md:py-16">
         <div className="mb-10">
-          <h1 className="text-2xl md:text-3xl font-bold text-navy mb-3" style={{ wordBreak: 'keep-all' }}>
+          <h1 className="text-2xl md:text-3xl font-bold text-navy mb-3 break-keep">
             {title}
           </h1>
           <p className="text-sm text-slate-500">
@@ -40,7 +40,7 @@ export default function LegalLayout({ title, effectiveDate, version, children }:
           </p>
         </div>
 
-        <article className="legal-doc text-slate-600" style={{ wordBreak: 'keep-all', lineHeight: '1.85' }}>
+        <article className="legal-doc text-slate-600 break-keep leading-[1.85]">
           {children}
         </article>
       </main>
