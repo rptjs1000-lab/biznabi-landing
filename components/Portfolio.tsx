@@ -16,8 +16,8 @@ interface Work {
 const products: Work[] = [
   {
     title: '폐쇄형 공동구매 쇼핑몰',
-    category: '공동구매 플랫폼 · 라이브 운영',
-    desc: '폐쇄형 공동구매 커머스. 회원·상품·주문·정산까지 운영 중인 실서비스.',
+    category: '공동구매 · 회원제 커머스',
+    desc: '회원만 가격을 보는 폐쇄형 구조. 공동구매 라운드·주문·결제·정산 관리까지 갖춘 커머스 시스템.',
     image: '/portfolio/nangman.jpg',
   },
   {
